@@ -1,0 +1,312 @@
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.olx-footer-div{
+    width: 100%;
+}
+
+.olx-footer{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.footer-banner-img-div{
+    width: 33.33333333333333%;
+    margin: 5px 10px 0px 0px;
+}
+
+.olx-app-info-div {
+    width: 71%;
+    display: flex;
+    align-items: center;
+}
+
+.olx-app-info{
+    border-right: 2px solid rgba(186, 186, 186, 0.704);
+    margin: 0px 5px;
+    width: 530px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.olx-app-info-heading{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.olx-app-info-paragraph{
+    font-size: 25px;
+}
+
+.get-app-div{
+    margin-left: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.get-app-heading{
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.downloading-platform{
+    display: flex;
+    align-items: center;
+}
+
+.downloading-platform-img{
+    width: 5.5rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.main-footer{
+    width: 100%;
+    background-color: #ebeeef;
+}
+
+.all-pages-div{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.pages-links{
+    margin: 10px 30px 10px 30px;
+    width: -webkit-fill-available;
+}
+
+.pages-links-li{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.links-heading{
+    font-size: 13.5px;
+    font-weight: 500;
+    margin: 0px 0px 10px 0px;
+}
+
+.olx-main-footer-link{
+    font-size: 12px;
+    width: -webkit-fill-available;
+    padding: 5px 0px;
+}
+
+.app-installation-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.social-media-accounts-div{
+    display: flex;
+}
+
+.social-media-account{
+    width: 25px;
+    cursor: pointer;
+}
+
+.app-installation-div{
+    display: flex;
+    align-items: center;
+}
+
+.platform-img {
+    width: 100px;
+    margin: 3px 1px;
+    cursor: pointer;
+}
+
+.end-footer-div{
+    padding: 1rem 0;
+    background-color: #002f34;
+    color: #fff;
+    text-align: right;
+}
+
+.end-footer{
+    width: 70%;
+    margin: auto;
+}
+
+.end-footer-content {
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 2560px) {
+    .tablet-main-footer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .olx-app-info-heading {
+        font-size: 1.5rem;
+    }
+
+    .olx-app-info-paragraph {
+        font-size: 1.3rem;
+    }
+
+    .get-app-heading {
+        font-size: 1.2rem;
+    }
+
+    .links-heading {
+        font-size: 13px;
+    }
+
+    .olx-main-footer-link {
+        font-size: 14px;
+    }
+
+    .platform-img {
+        width: 115px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .olx-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+
+    .footer-banner-img-div{
+        width: 50%;
+    }
+
+    .olx-app-info-div {
+        width: 50%;
+    }
+
+    .footer-banner-img-div {
+        width: 40%;
+    }
+
+    .olx-app-info {
+        width: 0;
+    }
+
+    .olx-app-info-heading{
+        display: none;
+    }
+
+    .olx-app-info-paragraph{
+        display: none;
+    }
+
+    .downloading-platform-img {
+        margin: 0px 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .olx-footer{
+        display: none;
+    }
+
+    .tablet-main-footer{
+        display: block;
+    }
+
+    .social-media-account {
+        width: 25px;
+    }
+
+    .all-pages-div {
+        display: flex;
+        width: 100%;
+    }
+
+    .end-footer {
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .main-footer{
+        display: none;
+    }
+
+    .tablet-main-footer{
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .tablet-all-pages-div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pages-links {
+        width: -webkit-fill-available;
+        border: 1px solid rgba(213, 213, 213, 0.721);
+        border-collapse: collapse;
+        margin: 0;
+    }
+
+    .pages-links-li{
+        display: flex;
+        align-items: center;
+    }
+
+    .links-heading {
+        font-size: 14px;
+        padding: 10px 10px;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    .follow-pages-links{
+        display: flex;
+        align-items: center;
+    }
+
+    .follow-links-heading{
+        margin-right: auto;
+        font-size: 14px;
+        padding: 10px 10px;
+        font-weight: 500;
+    }
+
+    .social-media-accounts-div {
+        padding: 0px 10px;
+    }
+
+    .app-installation-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0px;
+    }
+
+    .right-arrow{
+        width: 25px;
+    }
+
+    .platform-img {
+        width: 100px;
+    }
+
+    .end-footer-content {
+        font-size: 14px;
+    }
+}

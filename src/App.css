@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    font-family: Roboto ,Helvetica,sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+    list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li{
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-div{
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-div{
+    width: 70%;
+    margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.category-tabs{
+    width: 50%;
+    display: flex;
+    align-items: center;
 }
+
+.category-tabs li{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.down-arrow {
+    width: 18%;
+}
+
+/* main content */
+
+.category-heading-div{
+    width: 70%;
+    margin: 10px auto;
+}
+
+.content-heading{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.category-menu-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    line-height: 2rem;
+}
+
+.category-tags{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 18px;
+    height: 200px;
+}
+
+.category-img {
+    width: 75%;
+}
+
+.category-heading{
+    font-size: 18px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    -webkit-filter: none;
+    filter: none;
+    height: 8.8rem;
+    width: 8.8rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.more-ads-div{
+    width: 70%;
+    margin: 10px auto;
+}
+
+
+.other-category-tag-images{
+
+}
+
+@media only screen and (min-width: 2560px) {
+    
+}
+
+@media only screen and (max-width: 2560px) {
+    
+}
+
+@media only screen and (max-width: 2062px) {
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 11pt;
+    }
+
+    .category-img {
+        width: 50%;
+    }
+
+    .other-category-img {
+        width: 50%;
+    }
+
+    .other-category-tag-images {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 9pt;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .menu-div {
+        width: 100%;
+    }
+
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 10pt;
+    }
+
+    .category-heading-div {
+        width: 100%;
+    }
+
+    .banner-div{
+        width: 60%;
+    }
+
+    .category-img {
+        width: 65%;
+    }
+
+    .category-heading{
+        font-size: 15px;
+    }
+
+    .category-menu-div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .category-menu-div::-webkit-scrollbar {
+        display: none;
+    }
+
+    .more-ads-div{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .menu-div {
+        width: 100%;
+    }
+
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 8pt;
+    }
+
+    .category-heading-div{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .menu-div {
+        width: 100%;
+    }
+
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 7pt;
+    }
+
+    .category-heading-div{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .menu-div {
+        width: 100%;
+    }
+
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 5.5pt;
+    }
+
+    .category-heading-div{
+        width: 100%;
+    }
+}
+
+

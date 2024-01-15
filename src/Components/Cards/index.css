@@ -1,0 +1,138 @@
+.Cards{
+    width: 90%;
+    height: 450px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.thumbnail{
+    width: 426px;
+    height: 200px;
+}
+
+.product-info-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.price-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.price-heading{
+    font-size: 20pt;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.title-div{
+    width: 100%;
+    padding: 5px 10px 60px;
+}
+
+.title-heading{
+    font-size: 93%;
+    color: rgb(130, 130, 130);
+}
+
+.user-info-div{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.user-location-div{
+    width: 100%;
+}
+
+.location-text{
+    font-size: 11pt;
+    color: rgb(130, 130, 130);
+}
+
+.ad-post-time-div{
+    width: 100%;
+}
+
+.ad-post-time{
+    font-size: 11pt;
+    color: rgb(130, 130, 130);
+}
+
+@media only screen and (max-width: 1440px) {
+    .Cards {
+        height: 100vh;
+    }
+
+    .title-div {
+        width: 100%;
+        padding: 5px 10px 49.5px;
+    }
+
+    .title-heading {
+        font-size: 93%;
+        color: rgb(130, 130, 130);
+    }
+  }
+
+  @media only screen and (max-width: 1366px) {
+    .title-div {
+        width: 100%;
+        padding: 5px 10px 32px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .Cards {
+        width: 15.5rem;
+        height: 115vh;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .ads-div {
+        width: 100%;
+    }
+
+    .Cards {
+        width: 97%;
+        height: 126vh;
+    }
+
+    .title-div {
+        width: 100%;
+        padding: 5px 10px 150px;
+    }
+}
+
+@media only screen and (max-width: 612px){
+    .Cards {
+        width: 100%;
+        height: 123vh;
+    }
+    .title-div {
+        width: 100%;
+        padding: 5px 10px 135px;
+    }
+
+    .price-heading {
+        font-size: 16pt;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .Cards {
+        width: 100%;
+        height: 115vh;
+    }
+    .title-div {
+        width: 100%;
+        padding: 5px 10px 95px;
+    }
+}

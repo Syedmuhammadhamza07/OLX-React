@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-register-div{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form-div{
+    width: 36%;
+    border: 1px solid #c5c5c5d0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
+
+.register-div{
+    width: 100%;
+    margin: 0px 0px 5px 0px;
+}
+
+.register-main-logo{
+    width: 100px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.greet-span{
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-email-input{
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    color: #c5c5c5d0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.register-email-input:focus{
+    border: 1px solid #35d3e5;
+}
+
+.next-btn{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #002f34;
+    padding: 10px;
+    color: #fff;
+}
+
+.privacy-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .registration-form-div {
+        width: 88%;
+    }
+}

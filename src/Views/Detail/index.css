@@ -1,0 +1,353 @@
+.detail-banner-div{
+    width: 100%;
+}
+
+.banner{
+    width: 60%;
+    margin: auto;
+}
+
+.detail-banner-img{
+    width: 100%;
+    margin: auto;
+}
+
+.product-detail-div{
+    width: 100%;
+}
+
+.singleProduct-detail-div{
+    width: 70%;
+    margin: auto;
+}
+
+.slider-and-pofile-info{
+    width: 100%;
+    display: flex;
+}
+
+.sliderAndProduct-detail{
+    width: 70%;
+}
+
+.detail-product-slider-div{
+    max-width: 100%;
+    margin: 0.5rem 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.detail-product-div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 5px;
+}
+
+.detail-product-info-div{
+    width: 100%;
+    margin: 10px 0px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #d8dfe0;
+    border-radius: 4px;
+    padding: 1.4rem;
+    overflow: hidden;
+}
+
+.detail-profile-info-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-user-info{
+    display: flex;
+    align-items: center;
+}
+
+.detail-profile-img{
+    margin-right: 10px;
+}
+
+.userProfile-img{
+    width: 80px;
+}
+
+.detail-profile-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.see-prfile{
+    display: flex;
+    align-items: center;
+}
+
+.detail-profile-info span{
+    font-size: 0.85rem;
+}
+
+.detail-user-contact-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-phone-number{
+    margin: 10px 0px;
+}
+
+.phone-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #002f34;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.phone-btn img{
+    width: 20px;
+    margin: 0px 5px;
+}
+
+.user-chat{
+    margin: 10px 0px;
+}
+
+.chat-btn{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #002f34;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #002f34;
+}
+
+.chat-btn:hover{
+    border: 3px solid #002f34;
+}
+
+.chat-btn img{
+    width: 20px;
+    margin: 0px 5px;
+}
+
+.detail-user-location-div{
+    width: 100%;
+    margin: 10px 0px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #d8dfe0;
+    border-radius: 4px;
+    padding: 1.4rem;
+    overflow: hidden;
+}
+
+.detail-location-heading-div{
+    margin: 0px 0px 10px;
+}
+
+.detail-location-heading{
+    font-size: 1.5rem;
+}
+
+.detail-user-location-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.detail-user-location-info img{
+    margin: 0px 5px 0px 0px;
+}
+
+.detail-google-ads-div{
+    width: 100%;
+    margin: 10px 0px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.detail-location-heading-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.detail-adId-heading{
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+.report-btn{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.report-btn:hover{
+    text-decoration: underline;
+}
+
+.report-btn img{
+    width: 15px;
+    margin: 0px 5px 0px 0px;
+}
+
+.detail-googleads-post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 10px 0px;
+}
+
+.ad-detail-div{
+    width: 100%;
+    margin: 10px 0px;
+    height: auto;
+    border: 1px solid #d8dfe0;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 1.4rem;
+}
+
+.detail-product-information-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.detail-product-price{
+    margin-right: auto;
+}
+
+.detail-product-price-heading{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.detail-likeAndShare-icon{
+    display: flex;
+    align-items: center;
+}
+
+.detail-likeAndShare-icon img{
+    margin: 0px 5px;
+}
+
+.detail-product-title{
+    margin: 0px 0px 5px 0px;
+}
+
+.detail-product-title-heading{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.detail-ad-post-time{
+    width: 15%;
+    text-align: end;
+}
+
+.posted-detail-div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.posted-detail{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.posted-tags{
+    margin-right: auto;
+}
+
+.posted-tags-text{
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+    .detail-product-slider-div{
+        max-width: 100%;
+        margin: 0.5rem 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        width: 100%;
+    }
+
+    .sliderAndProduct-detail{
+        width: 100%;
+    }
+
+    .slider-and-pofile-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .singleProduct-detail-div{
+        width: 100%;
+    }
+
+    .detail-product-slider-div{
+        max-width: 100%;
+        height: 274px;
+        margin: 0.5rem 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .detail-product-slider{
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .detail-product-info-div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .detail-product-div {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .detail-slider-left-btn{
+        position: absolute;
+        left: 1rem;
+    }
+
+    .detail-slider-right-btn{
+        position: absolute;
+        right: 1rem;
+    }
+}

@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    font-family: Roboto ,Helvetica,sans-serif;
+}
+
+.header-menu-div{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Top header */
+
+.top-header{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 8px 0px;
+}
+
+/* 
+=================
+Mobile view Start
+=================
+*/
+
+.olx-logo-div{
+    display: flex;
+    align-items: center;
+}
+
+/* 
+===============
+Mobile view End
+===============
+*/
+
+.main-logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+.motor{
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.property{
+    cursor: pointer;
+}
+
+
+.link-img-div{
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+@media only screen and (min-width: 2560px) {
+    .mobile-View-div{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 2560px) {
+    .mobile-View-div{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .mobile-View-div{
+        display: none;
+    }
+
+    .sell-btn-border {
+        width: 255px;
+    }
+
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.90%;
+        top: 68px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .mobile-View-div{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .only-mobile{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .main-logo {
+        width: 40px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .main-logo {
+        width: 40px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .main-logo {
+        width: 40px;
+    }
+}
+
+
+
+/* Main Header */
+
+.main-header{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 8px 0px;
+}
+
+.logo-black{
+    width: 70px;
+    cursor: pointer;
+}
+
+/* 
+========================
+Location DropDown Starts
+========================
+*/
+
+.location-dropdown-menu{
+    width: 29.5%;
+    margin: 0px 10px;
+}
+
+.location-img {
+    width: 25%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown .location-links, .dropbtn {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    border: 1px solid rgba(158, 158, 158, 0.762);
+    width: -webkit-fill-available;
+  }
+
+  .dropbtn{
+    background-color: #ffffff;
+    border: 2px solid #002f34;
+    border-radius: 5px;
+  }
+
+  li.dropdown {
+    display: inline-block;
+    width: 100%;
+    }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 19.25%;
+    height: 250px;
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    width: auto;
+    color: rgba(158, 158, 158, 0.762);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* 
+======================
+Location DropDown Ends
+======================
+*/
+
+.searchBox-div{
+    display: flex;
+    width: 100%;
+}
+
+.searchbox{
+    width: 100%;
+    padding: 14px;
+    background: #ffffff;
+    border: 2px solid #002f34;
+    font-size: 18px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.search-btn{
+    padding: 13px;
+    background-color: #002f34;
+    border: 2px solid #002f34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+.login-div{
+    width: auto;
+    margin: 0px 10px;
+}
+
+.Login-btn {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #002f34;
+    font-size: 15pt;
+    font-weight: 500;
+    color: #002f34;
+    background-color: transparent;
+}
+
+.Login-btn:hover{
+    border: none;
+}
+
+.UserProfile-div{
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.sellDiv {
+    cursor: pointer;
+}
+
+.sell-btn-border {
+    width: 12rem;
+}
+
+.sell-btn-content{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 16.05;
+    top: 75px;
+}
+
+.add-btn{
+    width: 20px;
+}
+
+
+@media only screen and (min-width: 2560px) {
+    .copy-main-header{
+        display: none;
+    }
+
+    .original-main-header{
+        display: block;
+    }
+
+    .sell-btn-content{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.05%;
+        top: 72px
+    }
+}
+
+@media only screen and (max-width: 2560px) {
+    .copy-main-header{
+        display: none;
+    }
+
+    .original-main-header{
+        display: block;
+    }
+
+    .sell-btn-content{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.05%;
+        top: 75px
+    }
+}
+
+@media only screen and (max-width: 2000px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.15%;
+        top: 75px
+    }
+}
+
+@media only screen and (max-width: 1924px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.25%;
+        top: 75px
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .copy-main-header{
+        display: none;
+    }
+
+    .original-main-header{
+        display: block;
+    }
+
+    .searchbox {
+        padding: 5px;
+    }
+
+    li a, .dropbtn {
+        padding: 7px 16px;
+    }
+
+    .search-btn {
+        padding: 4.58px;
+    }
+
+    .sell-btn-border {
+        width: 210px;
+    }
+
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.4%;
+        top: 67px;
+    }
+}
+
+@media only screen and (max-width: 1394px) {
+
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.5%;
+        top: 67px;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 17%;
+        top: 72px
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.5%;
+        top: 67px;
+    }
+}
+
+@media only screen and (max-width: 1111px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.3%;
+        top: 67px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .copy-main-header{
+        display: none;
+    }
+
+    .original-main-header{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.5%;
+        top: 67px;
+    }
+}
+
+
+@media only screen and (max-width: 920px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16.75%;
+        top: 67px;
+    }
+
+    .sell-btn-border {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 804px) {
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 18.05%;
+        top: 72px
+    }
+
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 17.05%;
+        top: 67px;
+    }
+
+    .sell-btn-border {
+        width: 355px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .copy-main-header{
+        display: block;
+    }
+
+    .main-header {
+        width: 100%;
+    }
+
+    .original-main-header{
+        display: none;
+    }
+
+    .location-dropdown-menu {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        width: 97.25%;
+    }
+
+    .copySearchBox-div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .searchbox{
+        width: 95%;
+        margin: 5px 0px 5px 10px;
+    }
+
+    .search-btn{
+        margin: 5px 10px 5px 0px;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .main-header{
+        width: 100%;
+    }
+
+    .original-main-header{
+        display: none;
+    }
+
+    .dropdown-content {
+        width: 30.5%;
+    }
+
+    .copy-main-header{
+        display: block;
+    }
+
+    .location-dropdown-menu {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        width: 95%;
+    }
+
+    .copySearchBox-div{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .main-header{
+        width: 100%;
+    }
+
+    .original-main-header{
+        display: none;
+    }
+
+    .copy-main-header{
+        display: block;
+    }
+
+    .location-dropdown-menu {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        width: 94.3%;
+    }
+
+    .copySearchBox-div{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .main-header{
+        width: 100%;
+    }
+
+    .original-main-header{
+        display: none;
+    }
+
+    .copy-main-header{
+        display: block;
+    }
+
+    .location-dropdown-menu {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        width: 93.65%;
+    }
+
+    .copySearchBox-div{
+        width: 100%;
+    }
+
+    .olx-logo-div {
+        display: flex;
+        align-items: center;
+        width: 30%;
+    }
+
+    .main-logo {
+        width: 60%;
+    }
+
+    .motor {
+        display: flex;
+        align-items: center;
+        margin: 0px 40px;
+    }
+}

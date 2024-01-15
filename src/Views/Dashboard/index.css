@@ -1,0 +1,30 @@
+.ads-div{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-Card-div{
+    width: 33.30%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.category-tags{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+    .main-Card-div {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 425px){
+    .main-Card-div {
+        width: 100%;
+    }
+}

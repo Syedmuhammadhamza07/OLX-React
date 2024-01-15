@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-PostAd-div{
+    width: 100%;
+}
+
+.postAd-header-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+    padding: 15px 20px;
+}
+
+.back-icon{
+    width: 25px;
+    margin: 0px 15px 0px 0px;
+    cursor: pointer;
+}
+
+.logo-icon{
+    width: 70px;
+}
+
+.PostAd-form-div{
+    width: 70%;
+    margin: 30px auto;
+}
+
+.postAd-heading-div{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+}
+
+.postAd-heading{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.postAdForm-div{
+    width: 100%;
+    border: 1px solid rgba(154, 154, 154, 0.734);
+    border-radius: 5px;
+}
+
+.mainSelectedCategory-div{
+    width: 100%;
+    border-bottom: 1px solid rgba(154, 154, 154, 0.734);
+    padding: 10px;
+}
+
+.selected-category-div{
+    width: 100%;
+    margin: 0px 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.all-heading{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+.selectedCategory-heading{
+    font-size: 15px;
+    margin: 0px 8px 0px 0px;
+}
+
+.changeCategory{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.userForm-div{
+    width: 100%;
+    border-bottom: 1px solid rgba(154, 154, 154, 0.734);
+}
+
+.main-form-div{
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.adTitle-div{
+    width: 100%;
+    margin: 0px 0px 5px;
+}
+
+.title-input-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adTitle-label{
+    font-size: 15px;
+    color: #494949d6;
+    margin-bottom: 5px;
+}
+
+.title-input{
+    width: 100%;
+    border: 1px solid #494949d6;
+    color: #494949d6;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.title-div-p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.title-p{
+    font-size: 12px;
+    margin-right: auto;
+    color: #494949d6;
+}
+
+.title-p-count{
+    font-size: 12px;
+    color: #494949d6;
+}
+
+.description-input{
+    border: 1px solid #494949d6;
+    color: #494949d6;
+    border-radius: 5px;
+    padding: 10px;
+    height: 150px;
+    resize: none;
+    overflow: hidden;
+}
+
+.select-options{
+    overflow-y: scroll;
+}
+
+.condition-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.condition-tags{
+    border: 1px solid #494949d6;
+    margin: 0px 5px 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #494949d6;
+}
+
+.postAd-price-div{
+    width: 100%;
+    border-bottom: 1px solid rgba(154, 154, 154, 0.734);
+    padding: 10px 15px;
+}
+
+.title-input[value^="Rs | "] {
+    font-size: 14px;
+}
+
+.postAd-upload-div{
+    width: 100%;
+    border-bottom: 1px solid rgba(154, 154, 154, 0.734);
+    padding: 10px 15px;
+}
+
+.add-photo-div{
+    border: 1px solid #494949d6;
+    margin: 5px;
+    padding: 32.25px;
+    border-radius: 5px;
+    color: #494949d6;
+}
+
+.upload-photo-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.upload-photo{
+    position: absolute;
+    top: 63.25rem;
+    left: 20.5rem;
+    opacity: 0;
+    width: 50px;
+}
+
+.upload-photo1{
+    position: absolute;
+    top: 63.25rem;
+    left: 28.5rem;
+    opacity: 0;
+    width: 50px;
+}
+
+.upload_photo{
+    width: 50px;
+}
+
+.postAd-userInfo-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 10px;
+}
+
+.postAd-profile-img{
+    width: 120px;
+    margin-right: 10px;
+}
+
+.postAd-profile-info-div{
+    width: 100%;
+}
+
+.postAd-phoneNumber-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #494949d6;
+}
+
+.phone-number{
+    margin-right: auto;
+}
+
+.postAd-phoneNumber-div{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.show-phoneNumber{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-right: auto;
+}
+
+.post-btn-div{
+    width: 100%;
+}
+
+.Post-btn{
+    background-color: #002f34;
+    color: #fff;
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .upload-photo{
+        position: absolute;
+        top: 64.25rem;
+        left: 16.75rem;
+        opacity: 0;
+        width: 50px;
+    }
+    
+    .upload-photo1{
+        position: absolute;
+        top: 64.25rem;
+        left: 24.5rem;
+        opacity: 0;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .upload-photo {
+        position: absolute;
+        top: 64.25rem;
+        left: 12.75rem;
+    }
+    .upload-photo1 {
+        position: absolute;
+        top: 64.25rem;
+        left: 20.75rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .PostAd-form-div {
+        width: 100%;
+    }
+    
+    .upload-photo {
+        position: absolute;
+        top: 66.85rem;
+        left: 10.5rem;
+    }
+    .upload-photo1 {
+        position: absolute;
+        top: 66.85rem;
+        left: 18.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .upload-photo {
+        position: absolute;
+        top: 67.5rem;
+        left: 3.35rem;
+    }
+    .upload-photo1 {
+        position: absolute;
+        top: 67.5rem;
+        left: 11.25rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .upload-photo {
+        position: absolute;
+        top: 68.5rem;
+        left: 3.35rem;
+    }
+    .upload-photo1 {
+        position: absolute;
+        top: 68.5rem;
+        left: 11.25rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .upload-photo {
+        position: absolute;
+        top: 73rem;
+        left: 3.35rem;
+    }
+    .upload-photo1 {
+        position: absolute;
+        top: 73rem;
+        left: 11.25rem;
+    }
+}
