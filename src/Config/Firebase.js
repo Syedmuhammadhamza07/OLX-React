@@ -32,18 +32,19 @@ export async function getAllProducts(){
 async function postAdToDb(ad) {
   try {
       console.log(ad);
-      const storageRef = ref(storage, `ads/${ad.image.name}`);
+      const storageRef = ref(storage, `ads/${ad.image[0].name}`);
+      const storageRef1 = ref(storage, `ads/${ad.image1[0].name}`);
       alert(storageRef)
 
-      await uploadBytes(storageRef, ad.image)
+      await uploadBytes(storageRef,storageRef1, ad.image)
 
-      const url = await getDownloadURL(storageRef)
+      const url = await getDownloadURL(storageRef,storageRef1)
 
       ad.image = url
       console.log(url);
       await addDoc(collection(db, "ads"), ad)
       alert('Data added successfully!')
-      window.location.href = "../../index.html"
+      navigate('/')
   } catch (e) {
       alert(e.message)
   }
@@ -75,5 +76,7 @@ export {
   getStorage,
   ref,
   uploadBytes,
-  getDownloadURL
+  getDownloadURL,
+  addDoc,
+  storage
 }

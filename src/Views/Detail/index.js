@@ -22,49 +22,10 @@ import like from "../../Images/heart.png"
 import share from "../../Images/share.png"
 
 function Detail(){
-    // const { adId } = useParams();
-    // const { id } = useParams();
-    // const [currentIndex, setCurrentIndex] = useState(0)
-    // const [singleProduct, setSingleProduct] = useState([]);
-    // const [productImg, setProductImg] = useState([]);
-
-    // useEffect(() => {
-    //     getProductDetail();
-    // }, [adId]);
-
-    // const getProductDetail = async ()=>{
-    //     async function getSingleAd(id) {
-    //         try {
-    //           console.log(id);
-    //           const docRef = doc(db, "ads", id);
-    //           const docSnap = await getDoc(docRef);
-          
-    //           if (docSnap.exists()) {
-    //             console.log("Document data:", docSnap.data());
-    //             return docSnap.data();
-    //           } else {
-    //             console.log("No such document!");
-    //             return null; // Return null or an empty object as a default value
-    //           }
-    //         } catch (error) {
-    //           console.error("Error fetching single ad:", error);
-    //           return null; // Return null or an empty object in case of an error
-    //         }
-    //       }
-    //       const adData = await getSingleAd(id);
-    //       console.log(adData);
-    //       if (adData) {
-    //         console.log(adData.title); // Check if title exists
-    //         // ... perform other operations
-    //       } else {
-    //         console.error('Error fetching single ad. Result is undefined.');
-    //       }
-    // }
-
-
     const { adId } = useParams();
     const [singleProduct, setSingleProduct] = useState({});
     const [productImg, setProductImg] = useState([]);
+    const [currentIndex , setCurrentIndex] = useState(0)
   
     useEffect(() => {
       getProductDetail();
@@ -73,13 +34,13 @@ function Detail(){
     const getProductDetail = async () => {
       try {
         const adData = await getSingleAd(adId);
-        console.log(adData);
+        console.log(adData.image1);
   
         if (adData) {
           setSingleProduct(adData);
-          setProductImg(adData.images || []); // Assuming images is an array
+          setProductImg(adData.image ,  adData.image1|| []);
           console.log(adData.title);
-          // ... perform other operations
+          
         } else {
           console.error('Error fetching single ad. Result is undefined.');
         }
@@ -87,8 +48,6 @@ function Detail(){
         console.error("Error fetching single ad:", error);
       }
     };
-
-
 
     // Slider Functionality Starts
 
@@ -115,6 +74,8 @@ function Detail(){
         slidesToShow: 3,
         slidesToScroll: 1
       };
+
+    // const descriptionEdited = singleProduct.description.split[' ']
 
     // Related ads slider ends
 
@@ -208,7 +169,7 @@ function Detail(){
                                     </div>
                                     <div className="posted-detail-div">
                                         <div className="posted-detail">
-                                            <span>{singleProduct.description}</span>
+                                            <span>{singleProduct.Description}</span>
                                         </div>
                                     </div>
                                 </div>

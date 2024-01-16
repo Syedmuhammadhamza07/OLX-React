@@ -23,33 +23,17 @@ const db = getFirestore(app);
   
 // })
  
-
-const signUpform = document.querySelector("#form");
-signUpform?.addEventListener('submit', async (e) => {
-  e.preventDefault()
-  console.log(e)
-  const fullname = e.target[0].value
-  const email = e.target[1].value
-  const password = e.target[2].value
-
-  try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-
-      // await addDoc(collection(db, "users"), {
-      //     fullname,
-      //     email
-      // })
-      console.log('userCredential --', userCredential)
-      await setDoc(doc(db, "users", userCredential.user.uid), {
+export async function register(userInfo) {
+      const {fullname , email , password} = userInfo
+      const {user:{uid}} = await createUserWithEmailAndPassword(auth, email, password)
+      const usrRef = doc(db, 'users' , uid);
+      await setDoc(usrRef, {
             fullname,
             email,
             password
       });
-
-  } catch (e) {
-      alert(e.message)
-  }
-})
+      alert("register Successfully!")
+}
 
 // const logout = document.querySelector("#logout-btn");
 

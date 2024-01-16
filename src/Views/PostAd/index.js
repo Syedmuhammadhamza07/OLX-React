@@ -1,47 +1,72 @@
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import "./index.css"
 import backIcon from "../../Images/back.png"
 import OlxLogo from "../../Images/logo-black.png"
 import uploadPhoto from "../../Images/photo-camera.png"
 import profileImg from "../../Images/userprofile.png"
-import { useNavigate } from "react-router-dom"
 import { IoToggle } from "react-icons/io5";
-import { postAdToDb, auth, getStorage, ref, uploadBytes, getDownloadURL } from "../../Config/Firebase"
-
+import { ref, uploadBytes, getDownloadURL, collection, addDoc, db, storage , auth } from "../../Config/Firebase";
 
 function PostAd (){
     const navigate = useNavigate()
+    const [fileItems, setFileItems] = useState([]);
+    const [fileNames, setFileNames] = useState([]);
+    const [description, setDescription] = useState('');
 
-    var fileItem;
-    var fileName;
-    window.onSubmit = function() {
-        const uid = auth.currentUser.uid
-        const title = document.getElementById('adTitle').value
-        const description = document.getElementById('description-box').value
-        const amount = +document.getElementById('price').value
-        const username = document.getElementById('userName').value
-        const image = document.querySelector('.upload-photo').files[0];
-        const image1 = document.querySelector('.upload-photo1').files[1];
-        // image.file
-        const ad = {
-            title,
-            description,
-            amount,
-            image,
-            image1,
-            username,
-            uid
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            setDescription((prevDescription) => prevDescription + '\n');
         }
-        
-        postAdToDb(ad)
-        
-    }
-    
-    window.getFiles = function(e) {
-      fileItem = e.target.files[0];
-      fileName = fileItem.name;
-    }
+    };
 
-
+    const onSubmit = async function() {      
+          try {
+            const uid = auth.currentUser.uid
+            const title = document.getElementById('adTitle').value
+            const Description = document.getElementById('description-box').value
+            const amount = document.getElementById('price').value
+            const username = document.getElementById('userName').value
+            const image = document.querySelector('.upload-photo').files[0];
+            const image1 = document.querySelector('.upload-photo1').files[0];
+            // image.file
+            const ad = {
+                title,
+                Description,
+                amount,
+                image,
+                image1,
+                username,
+                uid,
+            };
+            console.log("ad.image:", ad.image);
+            console.log("ad.image1:", ad.image1);
+            const storageRef = ref(storage, `ads/${ad.image?.name}`);
+            const storageRef1 = ref(storage, `ads/${ad.image1?.name}`);
+            await uploadBytes(storageRef, ad.image);
+            await uploadBytes(storageRef1, ad.image1);
+            const url = await getDownloadURL(storageRef);
+            const url1 = await getDownloadURL(storageRef1);
+            ad.image = url;
+            ad.image1 = url1;
+            await addDoc(collection(db, "ads"), ad);
+        
+            alert('Data added successfully!');
+            navigate("/")
+          } catch (error) {
+            alert(error.message);
+          }
+        };
+      
+        function getFiles(e) {
+            const selectedFiles = e.target.files;
+            const names = Array.from(selectedFiles).map((file) => file.name);
+        
+            setFileItems((prevFiles) => [...prevFiles, ...selectedFiles]);
+            setFileNames((prevNames) => [...prevNames, ...names]);
+        }
 
     return(
         <div className="main-PostAd-div">
@@ -87,7 +112,7 @@ function PostAd (){
                             <div className="adTitle-div">
                                 <div className="title-input-div">
                                     <label className="adTitle-label">Description</label>
-                                    <textarea className="description-input" id="description-box" required></textarea>
+                                    <textarea className="description-input" onChange={(e) => setDescription(e.target.value)} onKeyDown={handleKeyDown} id="description-box" required></textarea>
                                 </div>
                                 <div className="title-div-p">
                                     <p className="title-p">Include condition, features and reason for selling</p>
@@ -136,7 +161,7 @@ function PostAd (){
                         <div className="adTitle-div">
                             <div className="title-input-div">
                                 <label className="adTitle-label">Price</label>
-                                <input type="text" required id="price" className="title-input"/>
+                                <input type="number" required id="price" className="title-input"/>
                             </div>
                         </div>
                     </div>
@@ -147,8 +172,8 @@ function PostAd (){
                                 </div>
                                 <div className="title-input-div">
                                     <div className="upload-photo-div">
-                                        <div className="add-photo-div"><input type="file" className="upload-photo"/><img src={uploadPhoto} className="upload_photo"/></div>
-                                        <div className="add-photo-div"><input type="file" className="upload-photo1"/><img src={uploadPhoto} className="upload_photo"/></div>
+                                        <div className="add-photo-div"><input type="file"className="upload-photo" onChange={(e) => getFiles(e)}/><img src={uploadPhoto} className="upload_photo"/></div>
+                                        <div className="add-photo-div"><input type="file"className="upload-photo1" onChange={(e) => getFiles(e)}/><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
@@ -206,7 +231,7 @@ function PostAd (){
                                     <div className="postAd-profile-info-div">
                                         <div className="title-input-div">
                                             <label className="adTitle-label">Name</label>
-                                            <input type="text" required className="title-input"/>
+                                            <input type="text" required className="title-input" id="userName"/>
                                         </div>
                                     </div>
                                 </div>
@@ -223,7 +248,7 @@ function PostAd (){
                     </div>
                     <div className="main-form-div">
                         <div className="post-btn-div">
-                            <button className="Post-btn" onclick={onSubmit()}>Post</button>
+                            <button className="Post-btn" onClick={onSubmit}>Post</button>
                         </div>
                     </div>
                 </div>

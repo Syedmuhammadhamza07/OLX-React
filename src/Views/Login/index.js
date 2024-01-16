@@ -1,5 +1,4 @@
 import "./index.css"
-// import "../../Config/Firebase/index"
 
 import { useNavigate } from "react-router-dom"
 import mainLogo from "../../Images/logo-black.png"
@@ -12,9 +11,8 @@ function Login (){
     const navigate = useNavigate()
 
     return(
-        <form id="form">
             <div className="main-login-div">
-            <div className="login-form-div">
+            <div className="login-form-div" id="form">
                 <div className="loginPage-login-div">
                     <img src={mainLogo} className='login-main-logo' onClick={()=> navigate('/')}/>
                 </div>
@@ -36,7 +34,6 @@ function Login (){
                 </div>
             </div>
         </div>
-        </form>
     )
 }
 
