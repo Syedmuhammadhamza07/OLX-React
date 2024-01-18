@@ -37,7 +37,7 @@ function Detail(){
         if (adData) {
           setSingleProduct(adData);
 
-          setProductImg([adData.images[0],adData.images[1]]);
+          setProductImg([adData.images[0],adData.images[1],adData.images[2]]);
           
         } else {
             console.error('Error fetching single ad. Result is undefined.');
