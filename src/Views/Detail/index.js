@@ -3,7 +3,6 @@ import "./index.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleAd, db } from "../../Config/Firebase";
-import { doc, getDoc } from "firebase/firestore";
 
 import { BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
 
@@ -34,20 +33,25 @@ function Detail(){
     const getProductDetail = async () => {
       try {
         const adData = await getSingleAd(adId);
-        console.log(adData.image1);
   
         if (adData) {
           setSingleProduct(adData);
-          setProductImg(adData.image ,  adData.image1|| []);
-          console.log(adData.title);
+
+          setProductImg([adData.images[0],adData.images[1]]);
           
         } else {
-          console.error('Error fetching single ad. Result is undefined.');
+            console.error('Error fetching single ad. Result is undefined.');
         }
-      } catch (error) {
+    } catch (error) {
         console.error("Error fetching single ad:", error);
-      }
-    };
+    }
+};
+
+    // console.log(singleProduct);
+    // console.log("Product Img ==>",productImg);
+    // console.log("Product Img ka Current Index ==>",productImg[currentIndex]);
+
+    // console.log("singleProduct" ,singleProduct.images.);
 
     // Slider Functionality Starts
 
@@ -92,18 +96,19 @@ function Detail(){
                     <div className="slider-and-pofile-info">
                         <div className="sliderAndProduct-detail">
                             <div className="max-w-[100%] h-[547px] relative group detail-product-slider-div">
-                                <div style={{backgroundImage:`url(${singleProduct.image})`}} className="w-full h-full rounded-md bg-contain bg-center bg-black bg-no-repeat duration-500 detail-product-slider">
-                                    {/* Left arrow */}
+                                <div style={{backgroundImage: `url(${productImg[currentIndex]})`}} className="w-full h-full rounded-md bg-contain bg-center bg-black bg-no-repeat duration-500 detail-product-slider">
+                                    {/* // Left arrow */}
                                     <div className="group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-8 text-2xl rounded-full p-2 bg-transparent text-white cursor-pointer detail-slider-left-btn">
                                         <BsChevronCompactLeft onClick={prevSlide} size={30} />
                                     </div>
 
-                                    {/* Right arrow */}
+                                    {/* //Right arrow */}
                                     <div className="group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 text-2xl rounded-full p-2 bg-transparent text-white cursor-pointer detail-slider-right-btn">
                                         <BsChevronCompactRight onClick={nextSlide} size={30} />
                                     </div>
                                 </div>
                             </div>
+                            
                             <div className="ad-detail-div">
                                 <div className="product-info-div">
                                     <div className="detail-product-information-div">
@@ -150,7 +155,7 @@ function Detail(){
                                         </div>
                                         <div className="posted-detail">
                                             <div className="posted-tags">Price</div>
-                                            <div className="posted-tags-text">{`Rs. ${singleProduct.price}`}</div>
+                                            <div className="posted-tags-text">{`Rs. ${singleProduct.amount}`}</div>
                                         </div>
                                         <div className="posted-detail">
                                             <div className="posted-tags">Condition</div>
@@ -169,7 +174,7 @@ function Detail(){
                                     </div>
                                     <div className="posted-detail-div">
                                         <div className="posted-detail">
-                                            <span>{singleProduct.Description}</span>
+                                            <span>{singleProduct.description}</span>
                                         </div>
                                     </div>
                                 </div>

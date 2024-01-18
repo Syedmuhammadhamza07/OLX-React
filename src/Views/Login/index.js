@@ -25,7 +25,7 @@ function Login (){
                 <div className="signIn-btn-div">
                     <button className="signIn-btn"><img src={googleLogo} className="signin-btn-img"/>Continue with Google</button>
                     <button className="signIn-btn"><img src={facebookLogo} className="signin-btn-img"/>Continue with Facebook</button>
-                    <button className="signIn-btn" onClick={()=> navigate('/register')}><img src={emailLogo} className="signin-btn-img"/>Continue with Email</button>
+                    <button className="signIn-btn" onClick={()=> navigate('/login-page')}><img src={emailLogo} className="signin-btn-img"/>Continue with Email</button>
                     <button className="signIn-btn"><img src={phoneLogo} className="signin-btn-img"/>Continue with Phone</button>
                 </div>
                 <div className="termsAndCondition-div">

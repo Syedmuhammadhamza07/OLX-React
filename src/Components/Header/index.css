@@ -60,6 +60,96 @@ Mobile view End
     margin: 0px 10px;
 }
 
+
+
+/* User Profile Dropdown starts */
+
+.login-div .profile-img{
+    width: 50px;
+  }
+  
+  .sub-menu-wrap{
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 315px;
+    top: calc(110px + 0.8rem);
+    z-index: 1;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.12), 0 6px 6px 0 rgba(0,0,0,.24);
+    transition: max-height 0.5s;
+  }
+  
+  .sub-menu-wrap.open-menu{
+    max-height: 115vh;
+  }
+  
+  .sub-menu-wrap .user-sub-menu{
+    background-color: #fff;
+    
+  }
+  .user-sub-menu .user-info{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(178, 178, 178, 0.714);
+    padding: 10px;
+
+  }
+  
+  .userprofile-info{
+    margin: 0px 10px;
+  }
+  
+  .userprofile-info .greeting{
+    font-size: 12px;
+    color: rgba(105, 105, 105, 0.714);
+  }
+  
+  .userprofile-info #username-info{
+    font-size: 18px;
+  }
+  
+  .userprofile-info .view-profile{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .dropdown-link-div .user-sub-menu-link{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+  
+  .user-sub-menu-link .drop-down-icon{
+    margin-right: 15px;
+  }
+
+/* User Profile Dropdown Ends */
+
+.hide {
+    display: none;
+}
+
+.user-profile-dropdown-menu{
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-profileImgDiv{
+    margin: 0px 10px;
+}
+
+.dropDown-profile-img{
+    width: 100px;
+}
+
+.dropDown-dropIcon-img{
+    width: 50px;
+}
+
 @media only screen and (min-width: 2560px) {
     .mobile-View-div{
         display: none;

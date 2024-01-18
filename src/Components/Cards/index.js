@@ -11,7 +11,7 @@ function Cards ({post}) {
     return (
             <div onClick={()=> navigate(`/detail/${post.id}`)} className="Cards">
                 <div className="thumbnail-div">
-                    <img src={post.image} className="thumbnail"/>
+                    <img src={post.image3} className="thumbnail"/>
                 </div>
                 <div className="product-info-div">
                     <div className="price-div">

@@ -35,6 +35,7 @@ const slides = [
 
 function Dashboard() {
   const [product, setProduct] = useState([]);
+  const [productImg, setProductImg] = useState([]);
 
 useEffect(() => {
   getAds()
@@ -43,7 +44,11 @@ useEffect(() => {
 const getAds = async ()=>{
   const res = await getAllProducts()
   setProduct(res);
+  setProductImg([res.images[0]]);
+  setProduct(productImg)
 }
+
+console.log(product);
 
   return (
     <div>

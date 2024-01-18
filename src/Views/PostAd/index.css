@@ -195,7 +195,7 @@
 .upload-photo{
     position: absolute;
     top: 64.5rem;
-    left: 20.5rem;
+    left: 22.2rem;
     opacity: 0;
     width: 50px;
     cursor: pointer;
@@ -204,7 +204,16 @@
 .upload-photo1{
     position: absolute;
     top: 64.5rem;
-    left: 28.5rem;
+    left: 30rem;
+    opacity: 0;
+    width: 50px;
+    cursor: pointer;
+}
+
+.upload-photo3{
+    position: absolute;
+    top: 64.5rem;
+    left: 38rem;
     opacity: 0;
     width: 50px;
     cursor: pointer;

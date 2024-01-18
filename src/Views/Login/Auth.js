@@ -35,12 +35,19 @@ export async function register(userInfo) {
       alert("register Successfully!")
 }
 
-// const logout = document.querySelector("#logout-btn");
+export async function login(){
+  const email = document.querySelector('#register-email-input').value
+  const password = document.querySelector('#register-password-input').value
+  const user = await signInWithEmailAndPassword(auth, email, password)
+  alert("Logged In Successfully!")
+}
+
+const logout = document.querySelector("#logout-btn");
 
 // logout?.addEventListener('click' , ()=>{
 //     signOut(auth).then(() => {
 //         alert("Logout Successfully")
-//         window.location = './signin.html'
+//         navigate('/login')
 //       }).catch((error) => {
 //         console.log(error);
 //       });
@@ -71,6 +78,8 @@ onAuthStateChanged(auth, (user) => {
       // location.href = './signin.html'
   }
 })
+
+
 
 
 export {

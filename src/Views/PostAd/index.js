@@ -14,6 +14,7 @@ function PostAd (){
     const [fileItems, setFileItems] = useState([]);
     const [fileNames, setFileNames] = useState([]);
     const [description, setDescription] = useState('');
+    const [images, setImages] = useState([]);
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -22,35 +23,65 @@ function PostAd (){
         }
     };
 
+    function getFiles(e) {
+        const selectedFiles = e.target.files;
+        const names = Array.from(selectedFiles).map((file) => file.name);
+    
+        setFileItems((prevFiles) => [...prevFiles, ...selectedFiles]);
+        setFileNames((prevNames) => [...prevNames, ...names]);
+        const newImage = e.target.files[0];
+        setImages((prevImages) => [...prevImages, newImage]);
+    }
+
     const onSubmit = async function() {      
           try {
             const uid = auth.currentUser.uid
             const title = document.getElementById('adTitle').value
-            const Description = document.getElementById('description-box').value
+            const description = document.getElementById('description-box').value
             const amount = document.getElementById('price').value
             const username = document.getElementById('userName').value
-            const image = document.querySelector('.upload-photo').files[0];
-            const image1 = document.querySelector('.upload-photo1').files[0];
+            // const image = document.querySelector('.upload-photo').files[0];
+            // const image1 = document.querySelector('.upload-photo1').files[0];
+            const image3 = document.querySelector('.upload-photo1').files[0];
+
+            // const uploadPromises = images.map(async (image) => {
+            //     const storageRef = ref(storage, `ads/${image.name}`);
+            //     await uploadBytes(storageRef, image);
+            //     const url = await getDownloadURL(storageRef);
+            //     return url;
+            //   });
+
+            // const uploadedImageUrls = await Promise.all(uploadPromises);
+            
+            const uploadPromises = images.map(async (image, index) => {
+                const storageRef = ref(storage, `ads/${index}_${image.name}`);
+                await uploadBytes(storageRef, image);
+                const url = await getDownloadURL(storageRef);
+                return { url, index };
+            });
+            
+            const uploadedImageUrlsWithIndex = await Promise.all(uploadPromises);
+            
+            // Extracting URLs and creating an array with index as name
+            const uploadedImageUrls = uploadedImageUrlsWithIndex.map(({ url }) => url);
+
+            
+            
             // image.file
             const ad = {
                 title,
-                Description,
+                description,
                 amount,
-                image,
-                image1,
+                image3,
+                images: uploadedImageUrls,
                 username,
                 uid,
             };
-            console.log("ad.image:", ad.image);
-            console.log("ad.image1:", ad.image1);
-            const storageRef = ref(storage, `ads/${ad.image?.name}`);
-            const storageRef1 = ref(storage, `ads/${ad.image1?.name}`);
-            await uploadBytes(storageRef, ad.image);
-            await uploadBytes(storageRef1, ad.image1);
+            
+            const storageRef = ref(storage, `ads/${ad.image3?.name}`);
+            await uploadBytes(storageRef, ad.image3);
             const url = await getDownloadURL(storageRef);
-            const url1 = await getDownloadURL(storageRef1);
-            ad.image = url;
-            ad.image1 = url1;
+            ad.image3 = url;
             await addDoc(collection(db, "ads"), ad);
         
             alert('Data added successfully!');
@@ -58,15 +89,9 @@ function PostAd (){
           } catch (error) {
             alert(error.message);
           }
-        };
-      
-        function getFiles(e) {
-            const selectedFiles = e.target.files;
-            const names = Array.from(selectedFiles).map((file) => file.name);
+        };    
         
-            setFileItems((prevFiles) => [...prevFiles, ...selectedFiles]);
-            setFileNames((prevNames) => [...prevNames, ...names]);
-        }
+        console.log(images);
 
     return(
         <div className="main-PostAd-div">
@@ -174,7 +199,7 @@ function PostAd (){
                                     <div className="upload-photo-div">
                                         <div className="add-photo-div"><input type="file"className="upload-photo" onChange={(e) => getFiles(e)}/><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><input type="file"className="upload-photo1" onChange={(e) => getFiles(e)}/><img src={uploadPhoto} className="upload_photo"/></div>
-                                        <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
+                                        <div className="add-photo-div"><input type="file"className="upload-photo3" onChange={(e) => getFiles(e)}/><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
                                         <div className="add-photo-div"><img src={uploadPhoto} className="upload_photo"/></div>
