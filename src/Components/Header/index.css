@@ -150,114 +150,6 @@ Mobile view End
     width: 50px;
 }
 
-@media only screen and (min-width: 2560px) {
-    .mobile-View-div{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 2560px) {
-    .mobile-View-div{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    .mobile-View-div{
-        display: none;
-    }
-
-    .sell-btn-border {
-        width: 255px;
-    }
-
-    .sell-btn-content {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 16.90%;
-        top: 68px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .mobile-View-div{
-        display: none;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .top-header{
-        width: 100%;
-    }
-
-    .all-devices{
-        display: none;
-    }
-
-    .mobile-View-div{
-        display: block;
-    }
-
-    .only-mobile{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    .top-header{
-        width: 100%;
-    }
-
-    .all-devices{
-        display: none;
-    }
-
-    .mobile-View-div{
-        display: block;
-    }
-
-    .main-logo {
-        width: 40px;
-    }
-}
-@media only screen and (max-width: 375px) {
-    .top-header{
-        width: 100%;
-    }
-
-    .all-devices{
-        display: none;
-    }
-
-    .mobile-View-div{
-        display: block;
-    }
-
-    .main-logo {
-        width: 40px;
-    }
-}
-@media only screen and (max-width: 320px) {
-    .top-header{
-        width: 100%;
-    }
-
-    .all-devices{
-        display: none;
-    }
-
-    .mobile-View-div{
-        display: block;
-    }
-
-    .main-logo {
-        width: 40px;
-    }
-}
-
-
-
 /* Main Header */
 
 .main-header{
@@ -432,8 +324,11 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.05%;
+        right: 16.45%;
         top: 72px
+    }
+    .mobile-View-div{
+        display: none;
     }
 }
 
@@ -450,8 +345,11 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.05%;
+        right: 16.35%;
         top: 75px
+    }
+    .mobile-View-div{
+        display: none;
     }
 }
 
@@ -460,7 +358,7 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.15%;
+        right: 16.35%;
         top: 75px
     }
 }
@@ -470,7 +368,7 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.25%;
+        right: 16.35%;
         top: 75px
     }
 }
@@ -497,16 +395,20 @@ Location DropDown Ends
         padding: 4.58px;
     }
 
+    .mobile-View-div{
+        display: none;
+    }
+
     .sell-btn-border {
-        width: 210px;
+        width: 255px;
     }
 
     .sell-btn-content {
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.4%;
-        top: 67px;
+        right: 17.3%;
+        top: 68px;
     }
 }
 
@@ -516,8 +418,8 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.5%;
-        top: 67px;
+        right: 17%;
+        top: 70px;
     }
 }
 
@@ -527,7 +429,7 @@ Location DropDown Ends
         align-items: center;
         position: absolute;
         right: 17%;
-        top: 72px
+        top: 70px
     }
 }
 
@@ -536,8 +438,8 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.5%;
-        top: 67px;
+        right: 17%;
+        top: 70px;
     }
 }
 
@@ -546,7 +448,7 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         position: absolute;
-        right: 16.3%;
+        right: 17.3%;
         top: 67px;
     }
 }
@@ -559,6 +461,16 @@ Location DropDown Ends
 
     .original-main-header{
         display: block;
+    }
+    .mobile-View-div{
+        display: none;
+    }
+    .sell-btn-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 17.3%;
+        top: 67px;
     }
 }
 
@@ -645,6 +557,23 @@ Location DropDown Ends
         margin: 5px 10px 5px 0px;
     }
 
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .only-mobile{
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -675,6 +604,21 @@ Location DropDown Ends
     .copySearchBox-div{
         width: 100%;
     }
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .main-logo {
+        width: 40px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -700,6 +644,21 @@ Location DropDown Ends
 
     .copySearchBox-div{
         width: 100%;
+    }
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
+    }
+
+    .main-logo {
+        width: 40px;
     }
 }
 
@@ -742,5 +701,16 @@ Location DropDown Ends
         display: flex;
         align-items: center;
         margin: 0px 40px;
+    }
+    .top-header{
+        width: 100%;
+    }
+
+    .all-devices{
+        display: none;
+    }
+
+    .mobile-View-div{
+        display: block;
     }
 }

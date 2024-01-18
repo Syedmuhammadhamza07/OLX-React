@@ -2,7 +2,7 @@ import "./index.css"
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getSingleAd, db } from "../../Config/Firebase";
+import { getSingleAd } from "../../Config/Firebase";
 
 import { BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
 
@@ -47,11 +47,8 @@ function Detail(){
     }
 };
 
-    // console.log(singleProduct);
-    // console.log("Product Img ==>",productImg);
-    // console.log("Product Img ka Current Index ==>",productImg[currentIndex]);
-
-    // console.log("singleProduct" ,singleProduct.images.);
+    console.log(singleProduct);
+    
 
     // Slider Functionality Starts
 
@@ -78,8 +75,6 @@ function Detail(){
         slidesToShow: 3,
         slidesToScroll: 1
       };
-
-    // const descriptionEdited = singleProduct.description.split[' ']
 
     // Related ads slider ends
 
@@ -190,7 +185,7 @@ function Detail(){
                                             <img src={profileImg} className="userProfile-img"/>
                                         </div>
                                         <div className="detail-profile-info">
-                                            <span><strong>OLX user</strong></span>
+                                            <span><strong>{singleProduct.username}</strong></span>
                                             <span>Member since Aug 2019</span>
                                             <div className="see-prfile">
                                                 <span><strong>See Profile</strong></span>

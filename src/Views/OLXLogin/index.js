@@ -9,7 +9,6 @@ function Register (){
     const navigate = useNavigate()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
-    const [fullname, setFullname] = useState()
 
     const SignIn = async ()=> {
         try{
@@ -30,7 +29,6 @@ function Register (){
                     <span className="greet-span">Enter your Email</span>
                 </div>
                 <div className="register-div">
-                    {/* <input type="text" placeholder="Email" className="register-email-input" id="register-email-input"/> */}
                     <input type="text" placeholder="Email"  onChange={(e)=>{setEmail(e.target.value)}}  className="register-email-input" id="register-email-input" autoComplete="username"/>
                 </div>
                 <div className="register-div">

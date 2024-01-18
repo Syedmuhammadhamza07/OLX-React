@@ -40,18 +40,8 @@ function PostAd (){
             const description = document.getElementById('description-box').value
             const amount = document.getElementById('price').value
             const username = document.getElementById('userName').value
-            // const image = document.querySelector('.upload-photo').files[0];
-            // const image1 = document.querySelector('.upload-photo1').files[0];
             const image3 = document.querySelector('.upload-photo1').files[0];
-
-            // const uploadPromises = images.map(async (image) => {
-            //     const storageRef = ref(storage, `ads/${image.name}`);
-            //     await uploadBytes(storageRef, image);
-            //     const url = await getDownloadURL(storageRef);
-            //     return url;
-            //   });
-
-            // const uploadedImageUrls = await Promise.all(uploadPromises);
+            const date = new Date();
             
             const uploadPromises = images.map(async (image, index) => {
                 const storageRef = ref(storage, `ads/${index}_${image.name}`);
@@ -61,8 +51,6 @@ function PostAd (){
             });
             
             const uploadedImageUrlsWithIndex = await Promise.all(uploadPromises);
-            
-            // Extracting URLs and creating an array with index as name
             const uploadedImageUrls = uploadedImageUrlsWithIndex.map(({ url }) => url);
 
             
@@ -76,6 +64,7 @@ function PostAd (){
                 images: uploadedImageUrls,
                 username,
                 uid,
+                date
             };
             
             const storageRef = ref(storage, `ads/${ad.image3?.name}`);
