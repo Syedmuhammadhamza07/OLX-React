@@ -30,7 +30,7 @@ function Register (){
                     <span className="greet-span">Enter your Fullname</span>
                 </div>
                 <div className="register-div">
-                    <input type="text" placeholder="Fulname" onChange={(e)=>{setFullname(e.target.value)}} className="register-email-input" id="register-fullname-input"/>
+                    <input type="text" placeholder="Fullname" onChange={(e)=>{setFullname(e.target.value)}} className="register-email-input" id="register-fullname-input"/>
                 </div>
                 <div className="register-div">
                     <span className="greet-span">Enter your Email</span>
