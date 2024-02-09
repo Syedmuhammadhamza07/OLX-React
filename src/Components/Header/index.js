@@ -1,3 +1,10 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { onAuthStateChanged,getAuth,signOut } from "firebase/auth"
+import { getDocs,collection,db } from "../../Views/Login/Auth";
+import "./index.css";
+
 import MainLogo from "../../Images/olx logo.png";
 import MainBlackLogo from "../../Images/logo-black.png";
 import Humburger from "../../Images/icons8-hamburger-100.png";
@@ -13,13 +20,7 @@ import dropArrow from "../../Images/down-arrow.png"
 import MotorLogo from "./motor.svg";
 import PropertyLogo from "./property.svg";
 import SellBtnBorder from "./SellBtnBorder.svg";
-import { useState } from "react";
-import "./index.css";
-import { useNavigate } from "react-router-dom";
-
-import { initializeApp } from "firebase/app";
-import { onAuthStateChanged,getAuth,signOut } from "firebase/auth"
-import { getDocs,collection,db } from "../../Views/Login/Auth";
+import CartIcon from '../../Images/grocery-store.png'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBm9msXFDnZvAJe_Vw1l2xxDkX-9L4OQUI",
@@ -47,8 +48,6 @@ function Header() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
-        console.log('user is logged in')
-        console.log("USER",user)
         
         const userLogin = document.getElementById('signIn-link')
         userLogin.className = "hidden"
@@ -64,12 +63,10 @@ function Header() {
   });
 
   async function getUser(uid) {
-    console.log('uid', uid)
     const querySnapshot = await getDocs(collection(db, "users"));
     querySnapshot.forEach((doc) => {
     if (doc.id === uid) {
         const fullname = doc.data().fullname
-        console.log(fullname);
         const username = document.getElementById('username-info')
         username.innerHTML = fullname
     }
@@ -242,6 +239,17 @@ function Header() {
                               className="drop-down-icon"
                             />
                             <p>Favourite & Saved searches</p>
+                          </div>
+                        </div>
+
+                        <div className="dropdown-link-div">
+                          <div className="user-sub-menu-link" onClick={()=> navigate('/cart')}>
+                            <img
+                              src={CartIcon}
+                              alt="Favourite & Saved searches"
+                              className="drop-down-icon"
+                            />
+                            <p>Cart</p>
                           </div>
                         </div>
 

@@ -3,11 +3,12 @@ import "./index.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleAd } from "../../Config/Firebase";
-
+import { useDispatch } from "react-redux";
 import { BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
 
 import Header from "../../Components/Header";
 import Footer from "../../Components/footer";
+import { updateCart } from '../../Store/CartSlice'
 
 import bannerImg from "../../Images/banner.jpeg"
 import profileImg from "../../Images/userprofile.png"
@@ -19,12 +20,16 @@ import report from "../../Images/flag.png"
 import googleAds from "../../Images/detail-page-banner.jpeg"
 import like from "../../Images/heart.png"
 import share from "../../Images/share.png"
+import cart from "../../Images/grocery-store.png"
 
 function Detail(){
     const { adId } = useParams();
     const [singleProduct, setSingleProduct] = useState({});
     const [productImg, setProductImg] = useState([]);
     const [currentIndex , setCurrentIndex] = useState(0)
+
+    const dispatch = useDispatch()
+
   
     useEffect(() => {
       getProductDetail();
@@ -77,6 +82,12 @@ function Detail(){
       };
 
     // Related ads slider ends
+
+    const addToCart = () => {
+        console.log('ad', singleProduct)
+        dispatch(updateCart(singleProduct))
+        alert("Item added to your Cart")
+    }
 
     return <div>
         <Header/>
@@ -199,6 +210,10 @@ function Detail(){
                                         </div>
                                         <div className="user-chat">
                                             <button className="chat-btn"><img src={chat}/>Chat</button>
+                                        </div>
+
+                                        <div className="user-chat">
+                                            <button className="chat-btn" onClick={addToCart}><img src={cart}/>Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>

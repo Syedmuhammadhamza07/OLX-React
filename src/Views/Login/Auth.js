@@ -3,7 +3,6 @@ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onA
 
 import {getFirestore, getDocs, doc,collection, setDoc, deleteDoc,} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
-// import {getAds, searchInAds} from "./src/config/config.js";
 const firebaseConfig = {
   apiKey: "AIzaSyBm9msXFDnZvAJe_Vw1l2xxDkX-9L4OQUI",
   authDomain: "my-olx-bad77.firebaseapp.com",
@@ -15,13 +14,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
-
-// const sellItems = document.getElementById('sell')
-// sellItems?.addEventListener('click' , (event) =>{
-//   event.preventDefault()
-  
-// })
  
 export async function register(userInfo) {
       const {fullname , email , password} = userInfo
@@ -42,17 +34,6 @@ export async function login(){
   alert("Logged In Successfully!")
 }
 
-const logout = document.querySelector("#logout-btn");
-
-// logout?.addEventListener('click' , ()=>{
-//     signOut(auth).then(() => {
-//         alert("Logout Successfully")
-//         navigate('/login')
-//       }).catch((error) => {
-//         console.log(error);
-//       });
-// })
-
 async function getUser(uid) {
   console.log('uid', uid)
   const querySnapshot = await getDocs(collection(db, "users"));
@@ -67,20 +48,6 @@ async function getUser(uid) {
   }
   });
 }
-
-
-
-// Index.html ki js ka kaam hai 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-      renderAds()
-  } else {
-      // location.href = './signin.html'
-  }
-})
-
-
-
 
 export {
   auth,

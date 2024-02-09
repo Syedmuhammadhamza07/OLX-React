@@ -25,7 +25,6 @@ import fashion from "../../Images/fashion-beauty.png"
 import books from "../../Images/books-sports-hobbies.png"
 import kids from "../../Images/kids.png"
 
-
 const slides = [
   banner1,
   banner2,
@@ -36,6 +35,7 @@ const slides = [
 function Dashboard() {
   const [product, setProduct] = useState([]);
   const [productImg, setProductImg] = useState([]);
+  const [currentIndex, setcurrentIndex] = useState(0);
 
 useEffect(() => {
   getAds()
@@ -44,11 +44,11 @@ useEffect(() => {
 const getAds = async ()=>{
   const res = await getAllProducts()
   setProduct(res);
+  console.log("res ==>" ,res[0].images[0]);
   setProductImg([res.images[0]]);
   setProduct(productImg)
 }
 
-console.log(product);
 
   return (
     <div>

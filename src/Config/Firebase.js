@@ -22,8 +22,6 @@ export async function getAllProducts(){
     const querySnapshot = await getDocs(collection(db, "ads"));
     const products = []
     querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
       products.push({id:doc.id,...doc.data()})
     });
     return products
@@ -56,9 +54,8 @@ export async function getSingleAd(id){
   const docSnap = await getDoc(docRef);
   
   if (docSnap.exists()) {
-    return docSnap.data();
+    return {...docSnap.data() , id :id};
   } else {
-    // docSnap.data() will be undefined in this case
     console.log("No such document!");
   }
 }

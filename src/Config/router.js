@@ -5,6 +5,7 @@ import Register from "../Views/Register"
 import OLXLogin from "../Views/OLXLogin"
 import Login from "../Views/Login"
 import PostAd from "../Views/PostAd"
+import Cart from '../Views/Cart'
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     {
       path: "/postAd",
       element: <PostAd />,
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
     }
   ]);
 
