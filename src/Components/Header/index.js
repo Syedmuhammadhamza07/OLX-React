@@ -69,6 +69,7 @@ function Header() {
         const fullname = doc.data().fullname
         const username = document.getElementById('username-info')
         username.innerHTML = fullname
+        console.log("doc =>",doc);
     }
     });
   }

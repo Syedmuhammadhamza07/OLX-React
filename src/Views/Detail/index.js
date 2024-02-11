@@ -138,7 +138,7 @@ function Detail(){
                                     <div className="detail-product-information-div">
                                         <div className="detail-user-location-info">
                                             <img src={location} width={20} height={15}/>
-                                            <span className="detail-user-location-info-p">Malir, Karachi</span>
+                                            <span className="detail-user-location-info-p">{`${singleProduct.neighbourhood}, ${singleProduct.city}`}</span>
                                         </div>
                                         <div className="detail-ad-post-time">
                                             <span className="ad-post-time">5 days ago</span>
@@ -226,7 +226,7 @@ function Detail(){
                                     </div>
                                     <div className="detail-user-location-info">
                                         <img src={location} width={20} height={15}/>
-                                        <span className="detail-user-location-info">Malir, Karachi</span>
+                                        <span className="detail-user-location-info">{`${singleProduct.neighbourhood}, ${singleProduct.city}`}</span>
                                     </div>
                                 </div>
                             </div>

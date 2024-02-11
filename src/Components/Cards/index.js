@@ -7,11 +7,13 @@ function Cards ({post}) {
     const hours = today.getHours()
 
     const navigate = useNavigate()
+    console.log(post);
+
 
     return (
             <div onClick={()=> navigate(`/detail/${post.id}`)} className="Cards">
                 <div className="thumbnail-div">
-                    <img src={post.image3} className="thumbnail"/>
+                    <img src={post.images[0]} className="thumbnail"/>
                 </div>
                 <div className="product-info-div">
                     <div className="price-div">
@@ -23,7 +25,7 @@ function Cards ({post}) {
                     </div>
                     <div className="user-info-div">
                         <div className="user-location-div">
-                            <p className="location-text">Model Colony - Malir, Karachi</p>
+                            <p className="location-text">{`${post.neighbourhood} , ${post.city}`}</p>
                         </div>
                         <div className="ad-post-time-div">
                             <p className="ad-post-time">{`${hours} hours ago`}</p>

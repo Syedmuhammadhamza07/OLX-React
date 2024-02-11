@@ -223,6 +223,10 @@
     width: 50px;
 }
 
+.map-container{
+    width: 100%;
+}
+
 .postAd-userInfo-div{
     width: 100%;
     display: flex;
