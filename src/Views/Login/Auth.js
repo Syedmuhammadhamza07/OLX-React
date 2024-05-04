@@ -1,16 +1,17 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
-import {getFirestore, getDocs, doc,collection, setDoc, deleteDoc,} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
+import {getFirestore, getDocs, doc,collection, setDoc} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBm9msXFDnZvAJe_Vw1l2xxDkX-9L4OQUI",
-  authDomain: "my-olx-bad77.firebaseapp.com",
-  projectId: "my-olx-bad77",
-  storageBucket: "my-olx-bad77.appspot.com",
-  messagingSenderId: "666503542444",
-  appId: "1:666503542444:web:7a0b056b6a69a722f39109"
+  apiKey: "AIzaSyCmlRy1z17PgceLWktvGPoLTjWCEoj2qZ4",
+  authDomain: "olx-react-firebase-20ca8.firebaseapp.com",
+  projectId: "olx-react-firebase-20ca8",
+  storageBucket: "olx-react-firebase-20ca8.appspot.com",
+  messagingSenderId: "360883715311",
+  appId: "1:360883715311:web:027ebe6cadd9c2735c6f1a"
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);

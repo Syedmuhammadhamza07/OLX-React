@@ -5,8 +5,6 @@ import { store, persistor } from "./Store/Store";
 import Router from "./Config/router";
 import "./App.css";
 
-// https://www.youtube.com/watch?v=rWiYi9v8JFU map integeration video link
-
 function App() {
 
    

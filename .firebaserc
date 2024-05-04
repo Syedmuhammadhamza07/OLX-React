@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "olx-react-firebase-20ca8",
+    "development": "olx-react-firebase-20ca8"
+  },
+  "targets": {},
+  "etags": {}
+}
